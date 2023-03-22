@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabela</title>
+</head>
+<body>    
+    <table style="border: 2px solid black; border-collapse: collapse;">
+        <Caption>Tabela de Exemplo</Caption>
+        <thead>
+            <tr>
+                <th style="border: 2px solid black;">Cabeçalho</th>
+                <th style="border: 2px solid black;">Cabeçalho</th>
+                <th style="border: 2px solid black;">Cabeçalho</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td rowspan="2" style="border: 2px solid black; text-align: center;">a</td>
+                <td style="border: 2px solid black; text-align: right;">a</td>
+                <td style="border: 2px solid black; text-align: left;">a</td>
+            </tr>
+            <tr>
+                <td colspan="2" style="border: 2px solid black; text-align: center;">a</td>
+            </tr>
+            <tr>
+                <td style="border: 2px solid black; text-align: left;">a</td>
+                <td style="border: 2px solid black; text-align: right;">a</td>
+                <td style="border: 2px solid black; text-align: left;">a</td>
+            </tr>
+            <tr>
+                <td colspan="3" style="border: 2px solid black; text-align: center; vertical-align: top; height: 50px;">a</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
