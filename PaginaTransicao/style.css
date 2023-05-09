@@ -1,0 +1,14 @@
+.backgroud{
+    background-color: rgb(104, 180, 133);
+}
+
+.baizhu{
+    border-image: round;
+    border-radius: 15%;
+    display: inline-block;
+}
+
+.table{
+    border-collapse: collapse;
+    border: 1px black solid;
+}
