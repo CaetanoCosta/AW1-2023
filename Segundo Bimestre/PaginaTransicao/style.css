@@ -1,0 +1,93 @@
+.backgroud{
+    background: rgb(104,180,133);
+    background: linear-gradient(180deg, rgba(104,180,133,1) 0%, rgba(47,148,84,1) 100%);
+}
+
+.baizhu{
+    border-image: round;
+    border-radius: 15%;
+    margin-left: 35%;
+    transition: 200ms linear;
+}
+
+.baizhu:hover{
+    transform: scale(1.1);
+}
+
+.titulo{
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -25px 0 0 -25px;
+}
+
+.subTitulo{
+    display: inline-block;
+    position: absolute;
+    top: 65%;
+    left: 48.5%;
+    margin: -25px 0 0 -25px;
+}
+
+.container{
+    position: relative;
+}
+
+table{
+    width: 100%;
+}
+
+.table{
+    border-collapse: collapse;
+    border: 1px black solid;
+}
+
+.tableBottomLine{
+    border-collapse: collapse;
+    border: 1px black solid;
+    border-left: none;
+    border-right: none;
+    width: 200px;
+}
+
+.tableIcon{
+    border-collapse: collapse;
+    border: 1px black solid;
+    border-right: none;
+    text-align: center;
+    width: 50px;
+    transition: 200ms linear;
+}
+
+.tableIcon:hover{
+    transform: scale(1.4);
+    opacity: 0.5;
+}
+
+.dendro{
+    background: #00E304;
+    background: linear-gradient(to right, #00E304 0%, #00FF06 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.text{
+    font-family: "trebuchet MS", sans-serif;
+    font-size: 12px;
+    color: #000000;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-align: left;
+    letter-spacing: 0px;
+    line-height: 20px;
+}
+
+fieldset{
+    border: #000000 1px solid;
+}
+
+select{
+    background: rgb(104,180,133);
+}
