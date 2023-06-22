@@ -1,18 +1,111 @@
 @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 
+.divFlex{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    flex: 1;
+}
+
+.divFlexImagem{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    flex: 1;
+}
+
+
 body{
     font-family: 'Lobster', cursive;
-    margin: none;
-    background: rgb(58,139,73);
-    background: linear-gradient(90deg, rgba(58,139,73,1) 0%, rgba(132,255,108,1) 100%); 
+    background: rgb(34,193,195);
+    background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);
 }
 
 main{
-    position: relative;
+    display: flex;
+    background-color: #2e786e;
     top: 1vh;
-    left: 1.5vw;
-    background-color: rgb(13, 167, 13);
-    height: 96vh;
-    width: 96vw;
+    left: 1vw;
+    height: 98vh;
+    width: 98vw;
+    border-radius: 50px;
+}
+
+.login{
+    background-color: #1ad0b7;
+    height: 50vh;
+    width: 40vw;
     border-radius: 60px;
+    text-align: center;
+}
+
+h1{
+    margin-top: 3vw;
+    margin-bottom: 4vw;
+    font-size: xx-large;
+    background: #C32222;
+    background: linear-gradient(to right, #C32222 0%, #DB8B00 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;    
+}
+
+input{
+    margin-bottom: 2vw;
+    background-color: rgb(21, 172, 152);
+    height: 4vh;
+    width: 20vw;
+    border-radius: 10px;
+    border: none;
+    color: black;
+}
+
+.usuario{
+    font-size: xx-large;
+    margin-left: -12vw;
+    color: white;
+}
+
+.senha{
+    color: white;
+    font-size: xx-large;
+    margin-left: -14vw;
+}
+
+button{
+    margin-top: 1vw;
+    font-size: x-large;
+    height: 5vh;
+    width: 15vw;
+    border-radius: 15px;
+    background: rgb(34,193,195);
+    background: linear-gradient(76deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);
+}
+
+p{
+    font-size: xx-large;
+    color: white;
+}
+
+@media only screen and (max-width: 600px) {
+    .divFlexImagem > p{
+        display: none;
+    }
+
+    main{
+        flex-direction: column;
+    }
+
+    button{
+        font-size: large;
+    }
+
+    .usuario{
+        margin-left: none;
+    }
+
+    .senha{
+        margin-left: none;
+    }
 }
