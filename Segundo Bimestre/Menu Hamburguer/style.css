@@ -1,0 +1,52 @@
+body{
+    background-color: hotpink;
+}
+
+.icone {
+    display: none;
+}
+
+.icone-label{
+    display: none;
+}
+
+.content{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.menu{
+    display: flex;
+}
+
+.flex1{
+    flex: 1;
+    text-align: center;
+}
+
+.content-menu{
+    text-align: right;
+    margin-top: -54px;
+    display: none;
+}
+
+.menu-border{
+    border: 1px solid black;
+}
+
+@media screen and (max-width: 600px) {
+    .icone-label{
+        display: block;
+    }
+
+    .menu{
+        display: none;
+    }
+
+    .icone:checked ~ .content {
+        display: block;
+    }
+}
