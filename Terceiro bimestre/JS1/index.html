@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var numero1 = prompt("Insira um numero: ");
+        var numero2 = prompt("insira outro numero: ");
+
+        numero1 = Number(numero1);
+        numero2 = Number(numero2);
+
+        var soma = numero1+numero2;
+        alert("A soma dos números é: " + soma);
+
+        var nome = prompt("Insira seu nome:");
+        var idade = prompt("Insira sua idade:");
+
+        document.write(nome + " | " + nome.length + " | " + nome.toLowerCase() + " | " + nome.toUpperCase() + " | " + idade);
+
+        document.write(` | Seu nome é: ${nome} | a quantidade de letras no nome é: ${nome.length} | nome minusculo: ${nome.toLowerCase} | nome maiusculo: ${nome.toLocaleUpperCase} | sua idade é: ${idade}`);
+    </script>
+</body>
+</html>
