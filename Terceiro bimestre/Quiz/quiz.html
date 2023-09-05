@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Quiz de JavaScript</title>
+    <style>
+        body {
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        h1 {
+            color: #3498db;
+            text-align: center;
+        }
+
+        .question {
+            margin-bottom: 20px;
+            padding: 10px;
+            background-color: #ecf0f1;
+            border-radius: 5px;
+        }
+
+        .options {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .option {
+            margin: 5px 0;
+        }
+
+        .submit-button {
+            background-color: #3498db;
+            color: #ffffff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .tag {
+            display: none;
+            margin-top: 10px;
+            padding: 5px;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        .correct {
+            background-color: #2ecc71;
+            color: #ffffff;
+        }
+
+        .incorrect {
+            background-color: #e74c3c;
+            color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Quiz de League of legends</h1>
+
+        <div class="question" id="id1">
+            <p>Pergunta 1: Qual é o corta cura de ADC?</p>
+            <div class="options">
+                <label class="option"><input type="radio" name="q1" value="LembreteMortal"> Lembrete Mortal</label>
+                <label class="option"><input type="radio" name="q1" value="ArmaduraDeEspinhos"> Armadura de Espinhos</label>
+                <label class="option"><input type="radio" name="q1" value="PutrificadorQuimtec"> Putrificador Quimtec</label>
+                <label class="option"><input type="radio" name="q1" value="SerrespadaQuimiopunk"> Serrespada Quimiopunk</label>
+            </div>
+            <button class="submit-button" id="button1">Enviar</button>
+            <span class="tag correct" id="c1">Correto!</span>
+            <span class="tag incorrect" id="i1">Incorreto.</span>
+        </div>
+
+        <!-- Repita o mesmo padrão para as próximas questões -->
+
+        <div class="question" id="id2">
+            <p>Pergunta 2: Em quais das seguintes circunstâncias faz a Yummi sair de um campeão aliado</p>
+            <div class="options">
+                <label class="option"><input type="radio" name="q2" value="base"> Quando o campeão retorna para a base</label>
+                <label class="option"><input type="radio" name="q2" value="flash"> Quando o campeão utiliza o feitiço flash</label>
+                <label class="option"><input type="radio" name="q2" value="teletransporte"> Quando o campeão utiliza o feitiço Teletransporte</label>
+                <label class="option"><input type="radio" name="q2" value="vendaval"> Quando o campeão utiliza o item Força do Vendaval</label>
+            </div>
+            <button class="submit-button" id="button2">Enviar</button>
+            <span class="tag correct" id="c2">Correto!</span>
+            <span class="tag incorrect" id="i2">Incorreto.</span>
+        </div>
+
+        <!-- Repita o mesmo padrão para as próximas questões -->
+
+        <div class="question" id="id3">
+            <p>Pergunta 3: Qual o elo mais baixo do LoL?</p>
+            <div class="options">
+                <label class="option"><input type="radio" name="q3" value="madeira"> Madeira</label>
+                <label class="option"><input type="radio" name="q3" value="plastico"> Plastico</label>
+                <label class="option"><input type="radio" name="q3" value="papel"> Papel</label>
+                <label class="option"><input type="radio" name="q3" value="ferro"> Ferro</label>
+            </div>
+            <button class="submit-button" id="button3">Enviar</button>
+            <span class="tag correct" id="c3">Correto!</span>
+            <span class="tag incorrect" id="i3">Incorreto.</span>
+        </div>
+
+        <!-- Repita o mesmo padrão para as próximas questões -->
+
+        <div class="question" id="id4">
+            <p>Pergunta 4: O que é o Aatrox?</p>
+            <div class="options">
+                <label class="option"><input type="radio" name="q4" value="aspecto"> Aspecto</label>
+                <label class="option"><input type="radio" name="q4" value="darkin"> Darkin</label>
+                <label class="option"><input type="radio" name="q4" value="ascendido"> Ascendido</label>
+                <label class="option"><input type="radio" name="q4" value="yordle"> Yordle</label>
+            </div>
+            <button class="submit-button" id="button4">Enviar</button>
+            <span class="tag correct" id="c4">Correto!</span>
+            <span class="tag incorrect" id="i4">Incorreto.</span>
+        </div>
+
+        <!-- Repita o mesmo padrão para as próximas questões -->
+
+        <div class="question" id="id5">
+            <p>Pergunta 5: Qual a alma de dragão que possui a maior taxa de vitória? </p>
+            <div class="options">
+                <label class="option"><input type="radio" name="q5" value="nuvens"> Alma das Nuvens</label>
+                <label class="option"><input type="radio" name="q5" value="infernal"> Alma Infernal</label>
+                <label class="option"><input type="radio" name="q5" value="oceano"> Alma do Oceano</label>
+                <label class="option"><input type="radio" name="q5" value="montanha"> Alma da Montanha</label>
+            </div>
+            <button class="submit-button" id="button5">Enviar</button>
+            <span class="tag correct" id="c5">Correto!</span>
+            <span class="tag incorrect" id="i5">Incorreto.</span>
+        </div>
+
+        <!-- Repita o mesmo padrão para as próximas questões -->
+    </div>
+
+    <script>
+        var button1 = document.querySelector("#button1");
+        var c1 = document.querySelector("#c1");
+        var i1 = document.querySelector("#i1");
+
+        var button2 = document.querySelector("#button2");
+        var c2 = document.querySelector("#c2");
+        var i2 = document.querySelector("#i2");
+        var q2 = document.querySelector("#id2");
+
+        var button3 = document.querySelector("#button3");
+        var c3 = document.querySelector("#c3");
+        var i3 = document.querySelector("#i3");
+        var q3 = document.querySelector("#id3");
+
+        var button4 = document.querySelector("#button4");
+        var c4 = document.querySelector("#c4");
+        var i4 = document.querySelector("#i4");
+        var q4 = document.querySelector("#id4");
+
+        var button5 = document.querySelector("#button5");
+        var c5 = document.querySelector("#c5");
+        var i5 = document.querySelector("#i5");
+        var q5 = document.querySelector("#id5");
+
+        q2.style.display = "none";
+        q3.style.display = "none";
+        q4.style.display = "none";
+        q5.style.display = "none";
+
+        function questao1(){
+            var radioQ1 = document.querySelector("input[name='q1']:checked").value;
+            console.log(radioQ1)
+            if(radioQ1 == "LembreteMortal"){
+                c1.style.display = "block";
+                i1.style.display = "none";
+                button1.disabled = true;
+                button1.style.backgroundColor = "grey";
+                q2.style.display = "block";
+            } else {
+                i1.style.display = "block";
+                c1.style.display = "none";
+            }
+
+        }
+
+        function questao2(){
+            var radioQ2 = document.querySelector("input[name='q2']:checked").value;
+            console.log(radioQ2)
+            if(radioQ2 == "teletransporte"){
+                c2.style.display = "block";
+                i2.style.display = "none";
+                button2.disabled = true;
+                button2.style.backgroundColor = "grey";
+                q3.style.display = "block";
+            } else {
+                i2.style.display = "block";
+                c2.style.display = "none";
+            }
+        }
+
+        function questao3(){
+            var radioQ3 = document.querySelector("input[name='q3']:checked").value;
+            console.log(radioQ3)
+            if(radioQ3 == "ferro"){
+                c3.style.display = "block";
+                i3.style.display = "none";
+                button3.disabled = true;
+                button3.style.backgroundColor = "grey";
+                q4.style.display = "block";
+            } else {
+                i3.style.display = "block";
+                c3.style.display = "none";
+            }
+        }
+
+        function questao4(){
+            var radioQ4 = document.querySelector("input[name='q4']:checked").value;
+            console.log(radioQ4)
+            if(radioQ4 == "darkin"){
+                c4.style.display = "block";
+                i4.style.display = "none";
+                button4.disabled = true;
+                button4.style.backgroundColor = "grey";
+                q5.style.display = "block";
+            } else {
+                i4.style.display = "block";
+                c4.style.display = "none";
+            }
+        }
+
+        function questao5(){
+            var radioQ5 = document.querySelector("input[name='q5']:checked").value;
+            console.log(radioQ5)
+            if(radioQ5 == "nuvens"){
+                c5.style.display = "block";
+                i5.style.display = "none";
+                button5.disabled = true;
+                button5.style.backgroundColor = "grey";
+            } else {
+                i5.style.display = "block";
+                c5.style.display = "none";
+            }
+        }
+
+        button1.addEventListener("click", questao1);
+        button2.addEventListener("click", questao2);
+        button3.addEventListener("click", questao3);
+        button4.addEventListener("click", questao4);
+        button5.addEventListener("click", questao5);
+
+        
+
+        
+    </script>
+</body>
+</html>
