@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Recomposição</title>
+</head>
+<body>
+    <header>
+        <div class="flex">
+            <table>
+                <tr class="cor-texto">
+                    <th class="titulo">Nome:</th>
+                    <th class="titulo">Idade:</th>
+                </tr>
+                <tr>
+                    <td id="nome"></td>
+                    <td id="idade"></td>
+                </tr>
+            </table>
+        </div>
+        <div>
+            <table class="table">
+                <tr class="cor-texto">
+                    <th class="titulo" id="anoFuturo"></th>
+                </tr>
+                <tr>
+                    <td id="idadeFutura"></td>
+                </tr>
+            </table>
+        </div>
+    </header>
+    <main class="padding">
+        <table>
+            <tr class="header">
+                <th class="titulo-tabela">Diciplina</th>
+                <th class="titulo-tabela">Nota</th>
+            </tr>
+            <tr>
+                <td class="item-tabela">Português</td>
+                <td id="portugues" class="item-tabela"></td>
+            </tr>
+            <tr>
+                <td class="item-tabela">Matemática</td>
+                <td id="matematica" class="item-tabela"></td>
+            </tr>
+            <tr>
+                <td class="item-tabela">Desenvolvimento Web</td>
+                <td id="aw1" class="item-tabela"></td>
+            </tr>
+            <tr>
+                <td class="item-tabela">Média Geral</td>
+                <td id="media" class="item-tabela"></td>
+            </tr>
+        </table>
+    </main>
+    <footer>
+        <div class="grid-container">
+            <div class="grid-item"></div>
+            <div class="grid-item"></div>
+            <div class="grid-item"></div>
+            <div class="grid-item"></div>
+            <div class="grid-item"></div>
+            <div class="grid-item"></div>
+            <div class="grid-item"></div>
+            <div class="grid-item"></div>
+            <div class="grid-item"></div>
+        </div>
+    </footer>
+
+    <script>
+        var nome = prompt("Insira seu nome:");
+        var idade = prompt("Insira sua idade:");
+        var anoFuturo = prompt("Insira um ano para saber sua idade nesse ano:");
+        var notaPortugues =  parseFloat(prompt("Insira sua nota em português:"));
+        var notaMatematica =  parseFloat(prompt("Insira sua nota em matemática:"));
+        var notaAw1 =  parseFloat(prompt("Insira sua nota em desenvolvimento web:"));
+        var cor = prompt("Insira cor favorita em inglês:");
+        var inputString = prompt("Digite 9 números separados por espaços:");
+        var numeros = inputString.split(" ");
+
+        var grid = document.querySelectorAll(".grid-item");
+
+        for (var i=0; i<9; i++) {
+            grid[i].textContent = numeros[i];
+        }
+
+        document.querySelector("#nome").textContent = nome;
+        document.querySelector("#idade").textContent = idade;
+        document.querySelector("#portugues").textContent = notaPortugues;
+        document.querySelector("#matematica").textContent = notaMatematica;
+        document.querySelector("#aw1").textContent = notaAw1;
+        document.querySelector("#anoFuturo").textContent = `Em ${anoFuturo} você terá:`
+
+        var idadeFutura = parseInt((anoFuturo - 2023)) + parseInt(idade);
+        document.querySelector("#idadeFutura").textContent = idadeFutura + " anos";
+
+        var media = (notaMatematica + notaPortugues + notaAw1)/3;
+        document.querySelector("#media").textContent = Math.round(media);
+
+        var corTexto = document.querySelectorAll(".cor-texto");
+        var corFundo = document.querySelectorAll(".header");
+        corFundo.forEach(elemento => elemento.style.backgroundColor = cor)
+        corTexto.forEach(elemento => elemento.style.color = cor);
+    </script>
+</body>
+</html>
