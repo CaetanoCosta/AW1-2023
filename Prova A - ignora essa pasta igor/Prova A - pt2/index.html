@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Responsiva</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="half">
+        <div class="box">
+            <h1>DOM</h1>
+            <div class="code-container">
+                <table>
+                    <tbody>
+                        <tr>
+                            <td rowspan="8" id="html">html</td>
+                            <td rowspan="4" id="head">head</td>
+                            <td rowspan="2" colspan="2" id="meta">meta</td>
+
+                        </tr>
+                        <tr>
+
+                        </tr>
+                        <tr>
+                            <td rowspan="2" colspan="2" id="title">title</td>
+
+                        </tr>
+                        <tr>
+
+                        </tr>
+                        <tr>
+                            <td rowspan="4" id="body">body</td>
+                            <td rowspan="2" id="header">header</td>
+                            <td id="img">img</td>
+                        </tr>
+                        <tr>
+                            <td id="h1">h1</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="2" id="main">main</td>
+                            <td id="a">a</td>
+                            
+                        </tr>
+                        <tr>
+                            <td id="p">p</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="half">
+        <div class="box">
+            <h1>Código</h1>
+            <div class="code-container">
+                <pre>
+<div id="html_Div">
+&lt;html lang="pt-BR"&gt;
+</div>
+    &lt;head&gt;
+        &lt;title&gt;Minha Página&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;header&gt;
+            &lt;h1&gt;Minha Página&lt;/h1&gt;
+        &lt;/header&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+                </pre>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script>
+    var html = document.querySelector("#html");
+    var htmlClick = false;
+
+    var html_Div = document.querySelector("#html_Div");
+    html_Div.style.display = "none";
+
+    html.addEventListener("click", function (){
+        if(htmlClick === false){
+            htmlClick = !htmlClick;
+            document.getElementById("html").style.backgroundColor = "red";
+            html_Div.style.display = "block";
+        }else{
+            htmlClick = !htmlClick;
+            document.getElementById("html").style.backgroundColor = "white";
+            html_Div.style.display = "none";
+        }
+    });
+
+    html.addEventListener("mouseenter", function (event) {
+        event.target.style.backgroundColor = "pink";
+    },
+    false,);
+
+    html.addEventListener("mouseleave", function (event) {
+        if(htmlClick = true){
+            event.target.style.backgroundColor = "white";
+        }
+    },
+    false,);
+
+    var head = document.querySelector("#head");
+    var headClick = false;
+
+    head.addEventListener("click", function (){
+        if(headClick === false){
+            headClick = !headClick;
+            document.getElementById("head").style.backgroundColor = "red";
+        }else{
+            headClick = !headClick;
+            document.getElementById("head").style.backgroundColor = "white";
+        }
+    });
+
+    var body = document.querySelector("#body");
+    var bodyClick = false;
+
+    body.addEventListener("click", function (){
+        if(bodyClick === false){
+            bodyClick = !bodyClick;
+            document.getElementById("body").style.backgroundColor = "red";
+        }else{
+            bodyClick = !bodyClick;
+            document.getElementById("body").style.backgroundColor = "white";
+        }
+    });
+
+    var meta = document.querySelector("#meta");
+    var metaClick = false;
+
+    meta.addEventListener("click", function (){
+        if(metaClick === false){
+            metaClick = !metaClick;
+            document.getElementById("meta").style.backgroundColor = "red";
+        }else{
+            metaClick = !metaClick;
+            document.getElementById("meta").style.backgroundColor = "white";
+        }
+    });
+
+    var title = document.querySelector("#title");
+    var titleClick = false;
+
+    title.addEventListener("click", function (){
+        if(titleClick === false){
+            titleClick = !titleClick;
+            document.getElementById("title").style.backgroundColor = "red";
+        }else{
+            titleClick = !titleClick;
+            document.getElementById("title").style.backgroundColor = "white";
+        }
+    });
+
+    var header = document.querySelector("#header");
+    var headerClick = false;
+
+    header.addEventListener("click", function (){
+        if(headerClick === false){
+            headerClick = !headerClick;
+            document.getElementById("header").style.backgroundColor = "red";
+        }else{
+            headerClick = !headerClick;
+            document.getElementById("header").style.backgroundColor = "white";
+        }
+    });
+
+    var main = document.querySelector("#main");
+    var mainClick = false;
+
+    main.addEventListener("click", function (){
+        if(mainClick === false){
+            mainClick = !mainClick;
+            document.getElementById("main").style.backgroundColor = "red";
+        }else{
+            mainClick = !mainClick;
+            document.getElementById("main").style.backgroundColor = "white";
+        }
+    });
+
+    var img = document.querySelector("#img");
+    var imgClick = false;
+
+    img.addEventListener("click", function (){
+        if(imgClick === false){
+            imgClick = !imgClick;
+            document.getElementById("img").style.backgroundColor = "red";
+        }else{
+            imgClick = !imgClick;
+            document.getElementById("img").style.backgroundColor = "white";
+        }
+    });
+
+    var h1 = document.querySelector("#h1");
+    var h1Click = false;
+
+    h1.addEventListener("click", function (){
+        if(h1Click === false){
+            h1Click = !h1Click;
+            document.getElementById("h1").style.backgroundColor = "red";
+        }else{
+            h1Click = !h1Click;
+            document.getElementById("h1").style.backgroundColor = "white";
+        }
+    });
+
+    var a = document.querySelector("#a");
+    var aClick = false;
+
+    a.addEventListener("click", function (){
+        if(aClick === false){
+            aClick = !aClick;
+            document.getElementById("a").style.backgroundColor = "red";
+        }else{
+            aClick = !aClick;
+            document.getElementById("a").style.backgroundColor = "white";
+        }
+    });
+
+    var p = document.querySelector("#p");
+    var pClick = false;
+
+    p.addEventListener("click", function (){
+        if(pClick === false){
+            pClick = !pClick;
+            document.getElementById("p").style.backgroundColor = "red";
+        }else{
+            pClick = !pClick;
+            document.getElementById("p").style.backgroundColor = "white";
+        }
+    });
+
+
+
+</script>
+</html>
